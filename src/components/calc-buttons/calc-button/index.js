@@ -31,6 +31,7 @@ export default class CalcButton extends Component {
 const styles = StyleSheet.create({
     button: {
         width: 50,
+        height: 50,
     },
     text: {
         textAlign: "center",
