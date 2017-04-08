@@ -3,11 +3,7 @@
 import React, { Component } from 'react';
 import {
     AppRegistry,
-    StyleSheet,
-    View
 } from 'react-native';
-import Welcome from './src/components/welcome';
-import Instruction from './src/components/instruction';
 import Reducers from './src/reducers';
 import App from './src/app';
 import { createStore } from 'redux';
@@ -24,14 +20,5 @@ export default class ReactNativeCalculator extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-});
 
 AppRegistry.registerComponent('ReactNativeCalculator', () => ReactNativeCalculator);
