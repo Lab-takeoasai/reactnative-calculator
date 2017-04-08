@@ -11,7 +11,7 @@ export default class CalcButton extends Component {
     constructor(props) {
         super(props);
     }
-    
+
     render() {
         return (
             <TouchableHighlight
@@ -22,7 +22,7 @@ export default class CalcButton extends Component {
             </TouchableHighlight>
         );
     }
-    
+
     onPressCalcButton = () => {
         console.log(this.props.value);
     };

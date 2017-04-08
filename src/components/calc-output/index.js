@@ -11,6 +11,7 @@ export default class CalcOutput extends Component {
     constructor(props) {
         super(props)
     }
+
     render() {
         return (
             <View style={styles.container}>
