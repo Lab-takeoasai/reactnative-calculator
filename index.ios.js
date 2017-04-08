@@ -8,19 +8,19 @@ import {
 } from 'react-native';
 import Welcome from './src/components/welcome';
 import Instruction from './src/components/instruction';
-import CalcButtons from './src/components/calc-buttons';
-import CalcOutput from './src/components/calc-output';
+import Reducers from './src/reducers';
+import App from './src/app';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const store = createStore(Reducers);
 
 export default class ReactNativeCalculator extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Welcome />
-                <CalcOutput />
-                <CalcButtons />
-                <Instruction text="To get started, edit index.ios.js" />
-                <Instruction text="Press Cmd+R to reload, Cmd+D or shake for dev menu" />
-            </View>
+            <Provider store={store}>
+                <App />
+            </Provider>
         );
     }
 }
