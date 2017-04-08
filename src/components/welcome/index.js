@@ -6,7 +6,7 @@ import {
   Text
 } from 'react-native';
 
-export default class Sample extends Component {
+export default class Welcome extends Component {
   constructor() {
     super()
   }
