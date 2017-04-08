@@ -8,14 +8,14 @@ import {
 } from 'react-native';
 import Welcome from './src/components/welcome';
 import Instruction from './src/components/instruction';
-import CalcButton from './src/components/calc-button';
+import CalcButtons from './src/components/calc-buttons';
 
 export default class ReactNativeCalculator extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Welcome />
-        <CalcButton value="1" />
+        <CalcButtons />
         <Instruction text="To get started, edit index.ios.js" />
         <Instruction text="Press Cmd+R to reload, Cmd+D or shake for dev menu" />
       </View>
