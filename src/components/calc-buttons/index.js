@@ -8,8 +8,8 @@ import {
 import CalcButton from './calc-button';
 
 export default class CalcButtons extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
     }
 
     render() {

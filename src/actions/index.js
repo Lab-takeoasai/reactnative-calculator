@@ -8,7 +8,7 @@ export const NUMBER = 'NUMBER';
 export const CLEAR = 'CREAR';
 export const EQUAL = 'EQUAL';
 
-export function number(value) {
+export function number(value: number) {
   return {
     type: NUMBER,
     value: value,
