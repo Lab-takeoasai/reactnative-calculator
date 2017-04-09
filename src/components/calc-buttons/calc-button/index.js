@@ -6,8 +6,12 @@ import {
     TouchableHighlight,
     Text
 } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-export default class CalcButton extends Component {
+import * as Actions from '../../../actions';
+
+class CalcButton extends Component {
     constructor(props) {
         super(props);
     }
@@ -24,7 +28,7 @@ export default class CalcButton extends Component {
     }
 
     onPressCalcButton = () => {
-        console.log(this.props.value);
+        console.log(this.props);
     };
 };
 
@@ -37,3 +41,13 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 });
+
+function mapStateToProps(state) {
+    return state;
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        ...bindActionCreators(Actions, dispatch),
+    };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CalcButton);
