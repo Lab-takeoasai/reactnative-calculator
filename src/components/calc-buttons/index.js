@@ -35,7 +35,7 @@ export default class CalcButtons extends Component {
                 </View>
                 <View style={styles.row}>
                     <CalcButton value="0" />
-                    <CalcButton value="." />
+                    <CalcButton value="c" />
                     <CalcButton value="=" />
                     <CalcButton value="+" />
                 </View>

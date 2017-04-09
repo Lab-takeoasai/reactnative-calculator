@@ -5,7 +5,7 @@ export const MINUS = 'MINUS';
 export const MULTIPLY = 'MULTIPLY';
 export const DIVIDE = 'DIVIDE';
 export const NUMBER = 'NUMBER';
-export const DOT = 'DOT';
+export const CLEAR = 'CREAR';
 export const EQUAL = 'EQUAL';
 
 export function number(value) {
@@ -15,9 +15,9 @@ export function number(value) {
   };
 }
 
-export function dot() {
+export function clear() {
   return {
-    type: DOT,
+    type: CLEAR,
   };
 }
 

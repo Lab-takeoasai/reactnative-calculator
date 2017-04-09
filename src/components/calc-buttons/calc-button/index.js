@@ -15,6 +15,9 @@ class CalcButton extends Component {
     constructor(props) {
         super(props);
     }
+    static propTypes = {
+        value: React.PropTypes.string.isRequired
+    }
 
     render() {
         return (
@@ -28,6 +31,7 @@ class CalcButton extends Component {
     }
 
     onPressCalcButton = () => {
+        console.log(this.props);
         const value = this.props.value;
         if (Number(value) >= 0) {
             this.props.number(Number(value));
@@ -38,7 +42,7 @@ class CalcButton extends Component {
                 case '*': this.props.multiply(); break;
                 case '/': this.props.divide(); break;
                 case '=': this.props.equal(); break;
-                case '.': this.props.dot(); break;
+                case 'c': this.props.clear(); break;
                 default: break;
             }
         }

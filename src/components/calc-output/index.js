@@ -6,8 +6,9 @@ import {
     View,
     Text
 } from 'react-native';
+import { connect } from 'react-redux';
 
-export default class CalcOutput extends Component {
+class CalcOutput extends Component {
     constructor(props) {
         super(props)
     }
@@ -15,7 +16,8 @@ export default class CalcOutput extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>{this.props.output}aaa</Text>
+                <Text>{this.props.calc.result}</Text>
+                <Text>{this.props.calc.current}</Text>
             </View>
         );
     }
@@ -26,3 +28,8 @@ const styles = StyleSheet.create({
         alignSelf: 'stretch',
     },
 });
+
+function mapStateToProps(state) {
+    return state;
+}
+export default connect(mapStateToProps)(CalcOutput);
