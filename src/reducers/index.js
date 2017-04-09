@@ -2,12 +2,12 @@
 
 import { combineReducers } from 'redux'
 import * as Actions from '../actions';
- 
+
 export default combineReducers({
     calc: calc
 });
 
-function calc(state = {current: 0, result: 0}, action) {
+function calc(state = { current: 0, result: 0 }, action) {
     switch (action.type) {
         case Actions.NUMBER:
             return Object.assign({}, state, {
