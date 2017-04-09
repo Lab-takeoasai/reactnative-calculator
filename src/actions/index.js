@@ -8,9 +8,10 @@ export const NUMBER = 'NUMBER';
 export const DOT = 'DOT';
 export const EQUAL = 'EQUAL';
 
-export function number() {
+export function number(value) {
   return {
     type: NUMBER,
+    value: value,
   };
 }
 

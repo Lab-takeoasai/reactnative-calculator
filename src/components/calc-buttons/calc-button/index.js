@@ -28,7 +28,20 @@ class CalcButton extends Component {
     }
 
     onPressCalcButton = () => {
-        console.log(this.props);
+        const value = this.props.value;
+        if (Number(value) >= 0) {
+            this.props.number(Number(value));
+        } else {
+            switch (value) {
+                case '+': this.props.add(); break;
+                case '-': this.props.minus(); break;
+                case '*': this.props.multiply(); break;
+                case '/': this.props.divide(); break;
+                case '=': this.props.equal(); break;
+                case '.': this.props.dot(); break;
+                default: break;
+            }
+        }
     };
 };
 

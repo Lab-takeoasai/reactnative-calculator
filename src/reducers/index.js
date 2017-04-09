@@ -8,5 +8,6 @@ export default combineReducers({
 });
 
 function test(state = {}, action) {
+    console.log(action, state);
     return state;
 }
