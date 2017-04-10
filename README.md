@@ -8,3 +8,10 @@
 ```bash
 $ yarn run flow
 ```
+
+# Storybook
+
+```bash
+$ yarn run storybook
+$ react-native run-io
+```
