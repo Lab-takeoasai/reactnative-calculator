@@ -1,0 +1,17 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+  "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+  },
+  "plugins": [
+    "react",
+    "react-native"
+  ]
+}
